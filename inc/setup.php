@@ -103,6 +103,11 @@ class Theme_Setup
         // Remove oEmbed-specific JavaScript from the front-end and back-end.
         remove_action( 'wp_head', 'wp_oembed_add_host_js' );
 
+        add_action( 'wp_enqueue_scripts',function (){
+            wp_dequeue_style( 'wp-block-library' );
+            wp_dequeue_style( 'wp-block-library-theme' );
+        } );
+
     }
 
     public static function support(){
@@ -127,11 +132,11 @@ class Theme_Setup
     public static function navigations(){
         add_action('after_setup_theme', function (){
             register_nav_menus(
-                array('main-menu' => __('Main Menu', env('TEXT_DOMAIN')))
+                array('main-menu' => __('Main Menu'))
             );
 
             register_nav_menus(
-                array('footer-menu' => __('Footer Menu', env('TEXT_DOMAIN')))
+                array('footer-menu' => __('Footer Menu'))
             );
         });
     }
