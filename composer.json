@@ -1,0 +1,18 @@
+{
+    "name": "techalica/adonis",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Imad Beyg",
+            "email": "imad.beyg@gmail.com"
+        }
+    ],
+    "require": {
+        "techalica/acf-extended": "^1.0",
+        "johnbillion/extended-cpts": "^4.4",
+        "vlucas/phpdotenv": "^5.1"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^5.1"
+    }
+}
