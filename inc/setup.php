@@ -131,13 +131,10 @@ class Theme_Setup
 
     public static function navigations(){
         add_action('after_setup_theme', function (){
-            register_nav_menus(
-                array('main-menu' => __('Main Menu'))
-            );
-
-            register_nav_menus(
-                array('footer-menu' => __('Footer Menu'))
-            );
+            register_nav_menus(array(
+                'main-menu'     => __('Main Menu', 'adonis'),
+                'footer-menu'   => __('Footer Menu', 'adonis')
+            ));
         });
     }
 }

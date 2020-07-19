@@ -9,3 +9,8 @@
     </head>
 
     <body <?php body_class(); ?>>
+        <header class="site-header">
+
+        </header>
+        <main class="site-main" role="main">
+
